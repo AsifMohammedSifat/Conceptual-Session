@@ -1,39 +1,37 @@
-1. Introduction
+Doc Link:  https://docs.google.com/document/d/1te5mc7eF3LahltUmw1u7oTP4yli9Iqnix7sflfNPlm0/edit?usp=sharing                                         
+                                         Conceptual Session-[17-4-2023]
+                                                    Topic: ArraY
+1. Introduction 
 2. Array Input/Output
 2. Array Insertion
 3. Array Deletion
-
-4. Exercise-1(Tag: Array): 
-You will be given an positive integer N and after that an integer array of size N. Then you will be given Q which refers to queries. For each query you will be given i and v where i refers to the index and v to value. You need to  add the value to that index. After all of the queries print the values.
-
-Sample Input:
-5 
+4. Exercise-1(Tag: Summation and Update):
+Sum and Update
+You will be given a positive integer N and after that an integer array of size N. Then you
+will be given Q which refers to queries. For each query you will be given i and v where i
+refers to the index and v to the value. You need to add the value to that index. After all
+of the queries print the values.
+Sample Input Sample Output
+5
 1 2 3 4 5
 3
 0 10
 2 5
 4 5
-
-Sample Output:
 11 2 8 4 10
-
-
-5. Exercise-2(Swap)
+5. Exercise-2 Swap
 Problem Statement:
-You are given a positive integer n . The second line will contain n positive integers. And the third line will contain a value Q.The next line will contain Q queries,every query will contain two values L and R.Now, You need to swap two values in the following way-
->> Swap the values of index L  with R .
+You are given a positive integer n . The second line will contain n positive integers. And
+the third line will contain a value Q.The next line will contain Q queries,every query will
+contain two values L and R.Now, You need to swap two values in the following way-
+>> Swap the values of index L with R .
 And lastly print the modified array.
-Sample Input
-
+Sample Input Sample Output
 7
-9 1 17 3 5 2 7 
-4						
-1 3 
+9 1 17 3 5 2 7
+4
+1 3
 2 4
 5 3
 4 6
-Sample Output:
-17 3 5 2 9 1 7
-
-Explanation -
-1st query - swap 1st index value with 3rd index value then the array will be -  17 1 9 3 5 2 7
+9 3 5 2 7 1 17
