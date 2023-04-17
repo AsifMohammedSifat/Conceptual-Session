@@ -1,6 +1,7 @@
 /*
-4. Exercise-1(Tag: Summation and Update): 
-				                                                	Sum and Update
+4. Exercise-1(Tag: Summation and Update): Sum and Update
+
+Problem Statement:
 You will be given a positive integer N and after that an integer array of size N. Then you will be given Q which refers to queries.
 For each query you will be given i and v where i refers to the index and v to the value. You need to  add the value to that index.
 After all of the queries print the values.
