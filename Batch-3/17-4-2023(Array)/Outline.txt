@@ -37,8 +37,3 @@ Sample Output:
 
 Explanation -
 1st query - swap 1st index value with 3rd index value then the array will be -  17 1 9 3 5 2 7
-
-
-
-
-
