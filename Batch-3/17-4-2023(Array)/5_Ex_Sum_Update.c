@@ -1,5 +1,5 @@
 /*
-4. Exercise-1(Tag: Summation and Update): Sum and Update
+                            4. Exercise-1(Tag: Summation and Update): Sum and Update
 
 Problem Statement:
 You will be given a positive integer N and after that an integer array of size N. Then you will be given Q which refers to queries.
