@@ -1,13 +1,3 @@
-/**
- *                              4_deletion.c
- * 1) Size n input
- * 2) Array element input
- * 3) Movement
- * 4) Assign
- * 5) Array print
-*/
-
-
 #include<stdio.h>
 int main()
 {
@@ -24,11 +14,13 @@ int main()
     for(int i=n;i>=pos+1;i--){
         arr[i] = arr[i-1];
     }
+
     arr[pos] = value;
 
     for(int i=0;i<=n;i++){
         printf("%d ",arr[i]);
     }
-   
+
+
     return 0;
 }
