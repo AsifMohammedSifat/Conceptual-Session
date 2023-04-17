@@ -7,8 +7,6 @@
 
 #include<stdio.h>
 int main(){
-  int arr[5];
-  printf("%d\n",sizeof(arr)/sizeof(int)); 
-  printf("%d\n",sizeof(arr)/sizeof(arr[0]));            
+  
   return 0;
 }
