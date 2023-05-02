@@ -6,7 +6,7 @@
 
 #include<stdio.h>
 
-float getPHI(){
+float getPHI(void){
     return 3.1416;
 }
 
