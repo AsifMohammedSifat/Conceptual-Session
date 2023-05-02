@@ -7,10 +7,10 @@ Discussion Topic:
     -Functions with arguments and without return values.
     -Functions with arguments and with return values.
 
-    i)Return + Parameter
-    ii)No Return + Parameter
-    iii)Return +No Parameter
-    iv)No Return + No Parameter   
+    i)Return + Arguments
+    ii)No Return + Arguments
+    iii)Return +No Arguments
+    iv)No Return + Arguments  
     
 3-  Problem Solving
 
