@@ -14,3 +14,24 @@
                   }
  * 
  * */
+void sum(int a,int b){
+    int sum;
+    sum = a+b;
+    printf("%d\n",sum);
+}
+
+int main()
+{
+    // int a=5,b=10;
+    // int sum = a +b ;
+    // printf("%d\n",sum);
+
+    // int c = 15,d = 20;
+    // int sum1 = c +d ;
+    // printf("%d\n",sum1);
+
+    sum(5,10);
+    sum(15,20);
+   
+    return 0;
+}
