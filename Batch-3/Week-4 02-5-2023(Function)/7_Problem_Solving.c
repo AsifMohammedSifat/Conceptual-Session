@@ -3,29 +3,33 @@
 */
 
 #include<stdio.h>
-int main(){
-    int test;
+void solve(){
+    int key;
+    scanf("%d",&key);
     int arr[5];
-    scanf("%d",&test);
-    while(test--){
-        int key;
-        scanf("%d",&key);
-        for(int i=1;i<=3;i++){
-            scanf("%d",&arr[i]);
-        }
 
-        if(arr[key]==0){
-            printf("NO\n");
-            continue;
-        }   
-        key = arr[key];
-        if(arr[key]==0){
-            printf("NO\n");
-            continue;
-        }
-        printf("YES\n");
+    for(int i=1;i<=3;i++){
+        scanf("%d",&arr[i]);
     }
-              
-    return 0;
+
+    if(arr[key]==0){
+        printf("NO\n");
+        return;
+    }
+    key = arr[key];
+
+    if(arr[key]==0){
+        printf("NO\n");
+        return;
+    }
+    printf("YES\n");
 }
 
+int main(){
+    int test;
+    scanf("%d",&test);
+    while(test--){
+        solve();
+    }              
+    return 0;
+}
