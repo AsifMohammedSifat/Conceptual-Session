@@ -1,5 +1,6 @@
 #include<stdio.h>
-int solve(int arr[],int size){
+long long int solve(int arr[],int size){
+    //if(size<0) return 0;
     if(size==0) return arr[0];
     return arr[size] + solve(arr,size-1);
 }
@@ -10,7 +11,7 @@ int main(){
     for(int i=0;i<sz;i++){
         scanf("%d",&arr[i]);
     }
-    printf("%d\n",solve(arr,sz-1));        
+    printf("%lld\n",solve(arr,sz-1));        
               
     return 0;
 }
