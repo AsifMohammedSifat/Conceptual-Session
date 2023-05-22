@@ -26,4 +26,6 @@ int main()
         cout<<a[i]<<" ";
     }
     cout<<endl;
+    delete [] a;
+    return 0;
 }
