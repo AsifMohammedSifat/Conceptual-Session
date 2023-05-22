@@ -10,12 +10,13 @@
 #include <stdio.h>
 int main()
 {
-    const int num = 10;
+    const int rahim = 15;
 
-    int *num_ptr = &num;
+    int* karim = &rahim;
 
-    *num_ptr = 15;
-    
-    printf("%d", num);
+    *karim = 0;
+
+    printf("%d",rahim);
+
     return 0;
 }
