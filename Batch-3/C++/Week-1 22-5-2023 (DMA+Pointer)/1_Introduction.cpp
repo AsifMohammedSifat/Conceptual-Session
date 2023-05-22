@@ -4,6 +4,9 @@ Topics:
 1)Pointer
 2)Dynamic memory allocation
 
+Important Link:
+visuaizer: https://pythontutor.com/visualize.html#mode=edit
+
 
 Pointer:
 1)What is pointer?
