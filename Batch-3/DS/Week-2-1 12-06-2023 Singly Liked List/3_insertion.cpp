@@ -6,15 +6,6 @@
 ||Phitron,ProgrammingHero||
 ||-----------------------||
 */
-
-/***
- * Insert at Head
- * Print List
- * Insert at Tail
- * Count LikedList Size
- * Insert any index
- * 
-*/
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,81 +14,83 @@ class Node{
         int val;
         Node* next;
 
-        Node(int val){
-            this->val = val;
-            this->next = NULL;
-        }
+    Node(int val){
+       this->val = val;
+       this->next = NULL;        
+    }
+
 };
 
 int getSize(Node* head){
-    int count=0;
-
-    while(head!=NULL){
-        head = head->next;
+    Node* temp = head;
+    int count = 0;
+    while(temp!=NULL){
+        temp = temp->next;
         count++;
     }
     return count;
 }
 
-//insert at tail
+//insert at tail build linked list
 void insertAtTail(Node* &head,int val){
     Node* newNode = new Node(val);
     if(head==NULL){
         head = newNode;
         return;
     }
+
     Node* temp = head;
+
     while(temp->next!=NULL){
         temp = temp->next;
     }
     temp->next = newNode;
+
 }
 
-//insert at head
+//Insert at head
 void insertAtHead(Node* &head,int val){
-    Node* newNode  = new Node(val);
-    if(head==NULL){
+    Node* newNode = new Node(val);
+    if(head == NULL){
         head = newNode;
         return;
     }
+
     Node* temp = head;
     head = newNode;
     newNode->next = temp;
 
 }
 
-//insert at any index
-void insertAtAnyIndex(Node* &head,int index,int val){
-    Node* newNode = new Node(val);
 
-    //insert at head
+void insertAtAnyPosition(Node* &head,int index,int val){
+    Node* newNode = new Node(val);
     if(index==1){
         insertAtHead(head,val);
         return;
     }
-    //insert at tail
-    else if(index == getSize(head)){
+    else if(index==getSize(head)){
         insertAtTail(head,val);
         return;
     }
 
-    int count = 1;
     Node* temp = head;
-    while(index-1!=count){
+
+    int pos = 1;
+
+    while(pos!=index-1){
         temp = temp->next;
-        count++;
+        pos++;
     }
 
-    Node* temp1 = temp->next;
+    Node* temp2 = temp->next;
     temp->next = newNode;
-    newNode->next = temp1; 
-
+    newNode->next = temp2;
 }
 
-//print singly linked list
 void printList(Node* head){
     Node* temp = head;
-
+    
     while(temp!=NULL){
         cout<<temp->val<<" ";
         temp = temp->next;
@@ -105,39 +98,24 @@ void printList(Node* head){
     cout<<endl;
 }
 
-
-
 int main(){
-
     Node* head = NULL;
-    insertAtHead(head,10);
-    insertAtHead(head,20);
-    insertAtHead(head,30);
-    printList(head);
-    cout<<endl;
-
-  
-    head = NULL;
     insertAtTail(head,10);
     insertAtTail(head,20);
     insertAtTail(head,30);
-    printList(head);
-    cout<<endl;
+    insertAtTail(head,40);
+    insertAtTail(head,50);
+    insertAtHead(head,60);
 
-   
+    printList(head);
 
     cout<<getSize(head)<<endl;
 
-    insertAtAnyIndex(head,1,40);
-    printList(head);
-
-    insertAtAnyIndex(head,4,0);
-    printList(head);
-
-    insertAtAnyIndex(head,2,5000);
-    printList(head);
-
-
-              
+    insertAtAnyPosition(head,1,70);
+    insertAtAnyPosition(head,7,70);
+    insertAtAnyPosition(head,3,5000);
+    
+    printList(head);           
+       
     return 0;
 }
