@@ -1,1 +1,5 @@
-
+Stack:
+1) MinStack - https://leetcode.com/problems/min-stack/description/
+2) BackSpace String Compare: https://leetcode.com/problems/backspace-string-compare/description/
+Queue:
+3) 1823. Find the Winner of the Circular Game : https://leetcode.com/problems/find-the-winner-of-the-circular-game/description/
