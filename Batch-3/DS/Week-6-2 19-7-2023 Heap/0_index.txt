@@ -1,0 +1,30 @@
+1) What is Heap?
+Ans: Tree based(Complete Binary Tree) sequential/ linear data structure.
+Ans: 
+    Simple and Powerful Data Structure.
+    Varient of Binary Tree (Complete Binary Tree)
+    
+    Operation:
+            -> Insert - O(logn) where BST support insertion around - O(h) [O(n) or O(logn)]
+            -> Deletion - O(logn)
+            -> get Max Value (Max Heap) / Min Value (Min Heap) - O(1)
+            -> Extract Max // O(logn)
+            -> Build heap form array (insert O(n))
+            -> Heap Sort
+
+    Type of Heap:
+                1) Max Heap (Return max value at O(1) time) - (up-heapify)
+                   Property: root value > child value
+                2) Min Heap (Return min value at O(1) time) - (down-heapify)
+                   Property: root value < child value
+
+    Relation between parent and child:
+    Parent : (index - 1)/2
+    Child : 2*index + 1 (Left child)
+            2*index + 2 (Right child)
+    Last Non Leaf Node : n/2-1 [ Where n = number of nodes]
+2) What is Complete Binary tree?
+3) Array representaiton of Complete Binary tree.
+4) Insertion
+5) Deletion
+6) Array to Heap Convertion
