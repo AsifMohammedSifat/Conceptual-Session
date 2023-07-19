@@ -15,7 +15,7 @@ Ans:
     Type of Heap:
                 1) Max Heap (Return max value at O(1) time) - (up-heapify)
                    Property: root value > child value
-                2) Min Heap (Return min value at O(1) time) - (down-heapify)
+                2) Min Heap (Return min value at O(1) time) - (up-heapify)
                    Property: root value < child value
 
     Relation between parent and child:
