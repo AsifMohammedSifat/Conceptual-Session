@@ -1,0 +1,113 @@
+1)What is Time Complexity?
+Ans: Time complexity is a concept in computer science that measures the amount of time an algorithm takes to run as a function of the input size. It helps us understand how the algorithm's running time increases with larger inputs.
+
+Way to Analysis Time Complexity
+1) Frequency Method / Step Count Method
+2) Asymptotic Notation
+
+
+1) Frequency Method:
+The frequency method is a technique used to analyze the time complexity of an algorithm. It works by counting the number of times each instruction is executed in the algorithm, and then multiplying that number by the time it takes to execute that instruction. The sum of these products is the overall time complexity of the algorithm.
+Example: f(n) = 2n^2+5n+1 , 2n+2
+
+Rules:
+1) Comments, Declearation Step Count is 0
+2) return and assignment statement step count is 1
+3) Ignore lower order expponents when higher order exponents are present
+4) Ignore Constant Multipliers
+
+----------
+Example-1:
+----------
+
+function Num(int n){
+    return n;
+}
+Total Operation: 
+n    Operation
+5      1
+10     1
+15     1
+
+-----------
+Example-2:
+-----------
+function Num(int n){
+    int mult = n*n;
+    return mult;
+}
+
+Total Step: 
+n    Step
+5      2
+10     2
+15     2
+
+
+-----------
+Example-3:
+-----------
+function Num(int n){
+    int mult = n*n;
+    return mult;
+}
+
+Total Step: 
+n    Step
+5      2
+10     2
+15     2
+
+
+-----------
+Example-4:
+-----------
+function Num(int a[][],int b[][]){
+
+    for(int i=0;i<n;i++){  // 1+n+1+n = 2n+2 = 2(n+1) = (n+1)
+
+        for(int j = 0;j<n;j++){ // n * (n+1)
+
+            c[i][j] = 0; // n * n *n = n^3
+
+            for(int k=0;k<n;k++){ // n * n * (n+1)
+
+                c[i][j] = a[i][j]*b[i][j]; // n * n *n = n^3
+-----------------------------------------------------------------------
+                                    = n+1+n^2+n+n^3+n^2+n^3
+                                    = 2n^3+2n^2+2n+1
+                                    = n^3
+
+            }
+        }
+    }
+}
+
+Total Step: 
+n    Step
+
+
+2) Asymptotic Method:
+Asymptotic method is a mathematical technique used to analyze the time complexity of an algorithm. It works by ignoring the constants and focusing on the growth rate of the algorithm as the input size increases. This allows us to compare the time complexity of different algorithms without being concerned with the specific implementation details.
+
+Convert Frequency to Asymptotic:
+1) 2n + 5
+2) 3n^2 + n
+
+There are 3 types of Asymptotic Method:
+1) Big-Oh Notation (Upper Bound) - Worst Case
+2) Big-Theta Notation (Tight Bound) - Average Case
+3) Omega Notaiton (Lower Bound) - Best Case
+
+-> Big-O notation (O(g(n))): This notation describes the upper bound of the algorithm's time complexity. It represents the worst-case scenario, where the algorithm takes the longest time to run.
+
+f(n) = O(g(n))
+f(n) <= c1.g(n) [c2>0;n>=n0]
+
+-> Big-Theta notation (Θ(g(n))): This notation describes the tight bound of the algorithm's time complexity. It represents the average-case scenario, where the algorithm takes an average amount of time to run.
+f(n) = theta(g(n))
+c1.g(n)>=f(n)>=c2.g(n)
+
+-> Big-Omega notation (Ω(g(n))): This notation describes the lower bound of the algorithm's time complexity. It represents the best-case scenario, where the algorithm takes the shortest time to run.
+f(n) = Omega(g(n))
+f(n) >= c2.g(n) [c2>0]
