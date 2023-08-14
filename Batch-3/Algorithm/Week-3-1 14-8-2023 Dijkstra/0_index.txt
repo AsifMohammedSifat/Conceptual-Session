@@ -5,7 +5,7 @@ BFS:
     Possible:
                   UnWeighted 
                   Undirected + Directed
-                  Non-Negative Node + Non-negative edge weight
+                  Non-Negative Node 
     ImPossible:
                   Weighted 
                   Negative Node + Negative edge weight
