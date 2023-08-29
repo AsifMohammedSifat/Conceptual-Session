@@ -78,6 +78,12 @@ void Union(int u, int v)
     }
 }
 
+bool isFriend(int u,int v){
+    int p = Find(u);
+    int q = Find(v);
+
+    return p==q;
+}
 
 int main()
 {
