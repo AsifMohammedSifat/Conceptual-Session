@@ -1,0 +1,58 @@
+Slide Link: https://docs.google.com/presentation/d/1ADDFd0v7K8uftl9sIm_8RgU_wiUFekmO/edit?usp=sharing&ouid=116066594040056950414&rtpof=true&sd=true
+
+cmd:
+
+>>> a = 5
+>>> type(a)
+<class 'int'>
+>>> a = 5.5
+>>> type(a)
+<class 'float'>
+>>> c = 5+2j
+>>> type(c)
+<class 'complex'>
+>>> int(5.5)
+5
+>>> float(5)
+5.0
+>>> complex(5,4)
+(5+4j)
+>>> clear
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'clear' is not defined
+>>> a = "hello"
+>>> list(a)
+['h', 'e', 'l', 'l', 'o']
+>>> a = ['phitron']
+>>> print(a)
+['phitron']
+>>> print(a[0])
+phitron
+>>> print(*a)
+phitron
+>>> a = ['a','b']
+>>> print(*a)
+a b
+>>> c = [['a','b'],['c']]
+>>> print(c)
+[['a', 'b'], ['c']]
+>>> a = 5
+>>> list(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>> set("phiiittrroon")
+{'t', 'i', 'p', 'h', 'n', 'r', 'o'}
+>>> set("phiiittrroon")
+{'t', 'i', 'p', 'h', 'n', 'r', 'o'}
+>>> set("phiiittrroon")
+{'t', 'i', 'p', 'h', 'n', 'r', 'o'}
+>>> set([1,2,3,4,5])
+{1, 2, 3, 4, 5}
