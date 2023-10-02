@@ -1,5 +1,4 @@
 """ 
-Abstract class dont have body
 We cannot create object of abstract classs
 
 """
