@@ -1,0 +1,130 @@
+OOP:
+1) Class
+2) Object
+3) Methods
+4) Inheritance
+5) Encaptulation
+6) Polymorphism
+7) Abstraction
+
+========================================================================================
+1-> Class : Ans: A class is a blueprint or template for creating objects. 
+========================================================================================
+2-> Object: An object is called an instance of a class. For example, suppose Bike is a class then we can create objects like bike1 , bike2 , etc from the class. 
+========================================================================================
+3-> Methods: Methods are functions that are associated with an object or a class.
+========================================================================================
+4-> Inheritance: Inheritance is a fundamental concept in object-oriented programming (OOP) that allows you to create new classes (subclasses or derived classes) based on existing classes (superclasses or base classes). 
+
+Type of Inheritance:
+
+I) Single Inheritance
+II) Multiple  Inheritance
+III) Multilevel Inheritance
+IV) Hierarchical Inheritance
+V) Hybrid Inheritance
+
+Single Inheritance:
+-------------------
+class Parent:
+    pass
+
+class Child(Parent):
+    pass
+
+
+Multiple Inheritance:
+---------------------
+class Parent1:
+    pass
+
+class Parent2:
+    pass
+
+class Child(Parent1, Parent2):
+    pass
+
+
+Multilevel Inheritance:
+------------------------
+class Grandparent:
+    pass
+
+class Parent(Grandparent):
+    pass
+
+class Child(Parent):
+    pass
+
+
+Hierarchical Inheritance:
+--------------------------
+class Parent:
+    pass
+
+class Child1(Parent):
+    pass
+
+class Child2(Parent):
+    pass
+
+
+Hybrid Inheritance:
+-------------------
+class A:
+    pass
+
+class B(A):
+    pass
+
+class C(A):
+    pass
+
+class D(B, C):
+    pass
+========================================================================================
+5-> Encaptulation:
+Ans: Data and Method are binding in a single unit.
+    Encaptulation = single unit(data + method)
+
+Two main types of encapsulation:
+I) Public Access (No Encapsulation)
+II) Private Access (Encapsulation)
+
+========================================================================================
+6-> Polymorphism
+Ans: The term "polymorphism" in computer science and mathematics is composed of two Greek words:
+
+Poly: "Poly" means "many" or "multiple."
+Morphis: "Morphis" comes from "morphe," which means "form" or "shape."
+When combined, "polymorphism" roughly translates to "many forms" or "multiple shapes."
+
+I) Compile-Time Polymorphism (Static Binding):
+Compile-time polymorphism, also known as static polymorphism, occurs when the decision about which method or function to call is made at compile-time (before the program is run).
+
+II)Run-Time Polymorphism (Dynamic Binding):
+Run-time polymorphism, also known as dynamic polymorphism, occurs when the decision about which method or function to call is made at run-time (while the program is executing).
+
+
+========================================================================================
+
+7-> Abstraction:
+Abstraction is one of the fundamental principles of object-oriented programming (OOP) that involves hiding complex implementation details and showing only the necessary features of an object.
+
+Abstract Classes:
+-------------------------------
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
