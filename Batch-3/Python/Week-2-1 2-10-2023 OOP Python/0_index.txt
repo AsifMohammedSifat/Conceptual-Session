@@ -99,7 +99,7 @@ Poly: "Poly" means "many" or "multiple."
 Morphis: "Morphis" comes from "morphe," which means "form" or "shape."
 When combined, "polymorphism" roughly translates to "many forms" or "multiple shapes."
 
-I) Compile-Time Polymorphism (Static Binding):
+I) Compile-Time Polymorphism (Static Binding): [Python dot support it]
 Compile-time polymorphism, also known as static polymorphism, occurs when the decision about which method or function to call is made at compile-time (before the program is run).
 
 II)Run-Time Polymorphism (Dynamic Binding):
