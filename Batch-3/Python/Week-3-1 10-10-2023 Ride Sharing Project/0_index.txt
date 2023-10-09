@@ -1,0 +1,59 @@
+Class Diagram:
+
++-----------------------+
+|     Ride_Sharing     |
+|-----------------------|
+| - company_name: str   |
+| - riders: list[Rider] |
+| - drivers: list[Driver]|
+|-----------------------|
+| + add_riders(rider)   |
+| + add_drivers(driver) |
+| + __repr__()          |
++-----------------------+
+            |
+            | Association
+            |
+            V
++-------------------+           +---------------+           +-----------------+
+|       User        |           |     Rider     |           |     Driver      |
+|-------------------|           |---------------|           |-----------------|
+| - name: str       |           | - current_ride: Ride | | - current_location: str |
+| - email: str      |           | - current_location: str| | + display_profile()    |
+| - nid: int        |           | + ride_request(uber, destination) | + display_profile()  |
+|                   |           | + current_ride: Ride | |---------------------|
+| + abstract        |           | + display_profile()  | | Association |
+|   display_profile()|           | + load_cash(amount)  | |-----------------|
+|-------------------|           | + update_location(location) | | + has_driver(rider, destination) |
+| Inheritance       |           | + show_current_ride() | +-----------------------------+
+|-------------------|           |-----------------------|
+|                   |           | Inheritance           |
+|                   |           |-----------------------|
+|                   |           | - start_location: str |
+|                   |           | - end_location: str   |
+|                   |           | - driver: Driver      |
+|                   |           | - rider: Rider        |
+|                   |           | - start_time: datetime|
+|                   |           | - end_time: datetime  |
+|                   |           | - estimated_fare: float|
+|                   |           | + start_ride()        |
+|                   |           | + end_ride()          |
+|-------------------|           |-----------------------|
+            |                     |
+            | Association         | Inheritance
+            |                     |
+            V                     V
++-------------------+         +-----------------+
+|       Ride        |         |   Ride_Matching |
+|-------------------|         |-----------------|
+| - start_location: str |   | - drivers: list[Driver] |
+| - end_location: str   |   |-------------------------|
+| - driver: Driver      |   | + has_driver(rider, destination) |
+| - rider: Rider        |   +-----------------------------+
+| - start_time: datetime|
+| - end_time: datetime  |
+| - estimated_fare: float|
+| + start_ride()        |
+| + end_ride()          |
+| + __repr__()          |
++-----------------------+
