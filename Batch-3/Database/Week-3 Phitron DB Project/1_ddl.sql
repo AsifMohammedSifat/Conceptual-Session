@@ -91,6 +91,7 @@ CREATE TABLE COURSE_TAKING(
 );
 
 
+-- Who register but not enroll
 SELECT FIRST_NAME
 FROM STUDENT S
 	LEFT JOIN ENROLLMENT E
@@ -102,5 +103,28 @@ FROM ENROLLMENT E
  RIGHT JOIN STUDENT S
 	ON S.STUDENT_ID = E.WHO_ENROLL
 WHERE WHO_ENROLL IS NULL;
+
+-- WHICH COURSE ENROLL HOW MANY TIME
+SELECT
+    COURSE.course_id,
+    COURSE.course_name,
+    COUNT(ENROLLMENT.enrollment_id) AS enrollment_count
+FROM
+    COURSE
+LEFT JOIN
+    ENROLLMENT ON COURSE.course_id = ENROLLMENT.which_enroll
+GROUP BY
+    COURSE.course_id, COURSE.course_name
+    HAVING
+    COUNT(ENROLLMENT.enrollment_id) > 1;
+
+
+
+
+
+
+
+
+
 
 
