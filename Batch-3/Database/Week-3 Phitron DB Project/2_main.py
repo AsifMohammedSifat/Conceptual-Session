@@ -15,6 +15,7 @@ def addTeacher(fname,lname,age,degree):
             VALUES(%s,%s,%s,%s)
             """
     cursor.execute(query,(fname,lname,age,degree))
+    print(cursor)
     connection.commit()
     print("Updated Successfully")
 
@@ -23,9 +24,15 @@ def addStudent(fName,lName,age):
             INSERT INTO  Student(first_name,last_name,age)
             VALUES(%s,%s,%s)
             """
-    cursor.execute(query,(fName,lName,age))
-    connection.commit()
-    print("Updated Successfully")
+    try:
+        cursor.execute(query,(fName,lName,age))
+        connection.commit()
+        print("Updated Successfully")
+    except pymysql.Error as e:
+        print(f"Error: {e}")
+        connection.rollback()
+
+ 
 
 def addCourse(cName):
     query = """
@@ -50,6 +57,7 @@ def enrollCourse(id,course):
             """
     cursor.execute(query,(id,courseID))
     connection.commit()
+
 
 def assignCourse():
     pass
@@ -114,6 +122,8 @@ while True:
     elif op==6:
         showNotEnroll()
     elif op==7:
+        cursor.close()
+        connection.close()
         break
     else:
         print("Invalid Input")
