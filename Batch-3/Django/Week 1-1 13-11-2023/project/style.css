@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.page-title{
+    font-size: 50px;
+    color: #FF3F8B;
+    text-align: center;
+    padding: 50px;
+}
+.button-custom{
+    /* border: 1px solid pink;
+    border-radius: 5px;
+    padding: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    color: white; */
+
+    text-decoration: none;
+    background-color: #FF3F8B;
+    padding: 10px 25px;
+    border-radius: 5px;
+    /* background-image:linear-gradient(orange,tomato); */
+    color:white;
+    font-weight: 400px;
+    
+}
+/* top page  */
+.top-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-image: url(./images/top-banner.png);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.top-banner-hi{
+    font-size: 50px;    
+}
+
+.top-banner-name{
+    font-size: 30px;
+    padding-left: 100px;
+}
+
+
+.half-width{
+    width: 35%;
+}
+
+.half-width img{
+    width: 90%;
+    margin: 100px;
+}
+.top-left{
+    align-items: flex-start;
+    
+}
+
+
+
+/* second page  */
+
+.second-page{
+    background-image:url(./images/top-banner.png);
+    background-repeat: no-repeat;
+    /* margin-top: 20px; */
+    background-size: cover;
+    height: 100vh;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 80px;
+    align-items: center;
+    justify-items: center;
+    padding: 70px;
+}
+
+.skill{
+    display: flex;
+    width: 20%;
+    gap: 25px;
+    justify-content: center;
+}
+
+.skill i{
+    font-size: 50px;
+}
+
+.skill h3{
+    font-size: 30px;
+}
+
+
+
+/* third-page  */
+.third-page{
+    background-image: url(./images/top-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+ 
+}
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 200px;
+    justify-items: center;   
+    padding: 50px;
+    grid-gap: 50px;
+
+}
+
+.blog{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.thumbline img{
+    width: 300px;
+    height: 150px;
+}
+
+.blog-title{
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.blog-autor a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FF3F8B;
+}
