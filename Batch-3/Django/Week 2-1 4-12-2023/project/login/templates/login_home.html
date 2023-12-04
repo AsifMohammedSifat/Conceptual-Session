@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+<h1>Welcome to Home</h1>
+<p>Your Name: {{name|default:"None"}}</p>
+<p>Your Mail:{{email|default:"None"}}</p>
+{{img}}
+<img class="rounded-circle" src="{% static 'upload/' %}{{ img }}" alt="">
+{% endblock  %}
