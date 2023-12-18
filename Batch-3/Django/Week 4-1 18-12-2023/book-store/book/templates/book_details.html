@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content%}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">First Publicaiton</th>
+        <th scope="col">Last Publicaiton</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.book_name}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.first_pub}}</td>
+        <td>{{item.last_pub}}</td>
+        <td><a href="{% url 'edit_book' item.id %}" class='btn btn-warning btn-sm' >Edit</a> <a class='btn btn-danger btn-sm' href="{% url 'delete_book' item.id %}">Delete</a> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  {% endblock %}

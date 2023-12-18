@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content%}
+
+
+
+<div style="width:80%;margin : auto;">
+    <h1>List of {{extra_data.type}}</h1>
+    <h1>{{name}}</h1>
+
+{% if booklist %}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Book Name</th>
+        <!-- <th scope="col">Author Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">First Publicaiton</th>
+        <th scope="col">Last Publicaiton</th>
+        <th scope="col">Action</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in booklist %}
+      <tr>
+        <td>{{item.id}}</td>
+        <td><a href="{% url 'book_details' item.id%}">{{item.book_name}}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <h3>No Data avaiable</h3>
+  {% endif %}
+</div>
+
+{% endblock %}

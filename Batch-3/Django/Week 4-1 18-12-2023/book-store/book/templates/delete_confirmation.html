@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content%}
+<div style="width:50%; margin:auto;">
+    <h1>Are you sure you want to delete this ? </h1>
+  <form method="post">{% csrf_token %} 
+    {{form}}
+    <button class="btn btn-info" type="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}
